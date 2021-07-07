@@ -1,5 +1,3 @@
-package com.tjwogns.buildsrc
-
 object Versions {
     const val KOTLIN_VERSION = "1.5.0"
     const val KOTLINX_COROUTINES = "1.5.0"
