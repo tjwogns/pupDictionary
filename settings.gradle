@@ -2,3 +2,4 @@ rootProject.name = "pupBreed"
 include ':app'
 include ':presentation'
 include ':data'
+include ':domain'
