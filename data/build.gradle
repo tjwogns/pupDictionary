@@ -8,6 +8,8 @@ plugins {
 apply from: rootProject.file("android.gradle")
 
 dependencies {
+    implementation project(":domain")
+
     implementation(Kotlin.KOTLIN_STDLIB)
     implementation(Kotlin.COROUTINES_CORE)
     implementation(Kotlin.COROUTINES_ANDROID)
