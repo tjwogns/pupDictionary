@@ -1,5 +1,6 @@
 package com.tjwogns.data.implementation
 
+import com.tjwogns.data.model.BreedDto
 import com.tjwogns.data.source.BreedRemoteSource
 import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.repository.BreedRepository

@@ -1,6 +1,7 @@
 package com.tjwogns.pupdictionary.di
 
 import android.app.Application
+import com.tjwogns.data.api.BreedApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -50,5 +51,11 @@ internal object ApiModule {
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideBreedService(retrofit: Retrofit): BreedApi {
+        return retrofit.create(BreedApi::class.java)
     }
 }

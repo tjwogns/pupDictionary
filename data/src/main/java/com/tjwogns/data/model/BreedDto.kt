@@ -1,6 +1,7 @@
 package com.tjwogns.data.model
 
 import com.google.gson.annotations.SerializedName
+import com.tjwogns.domain.model.Breed
 
 data class BreedDto (
     @SerializedName("id")
@@ -32,5 +33,34 @@ data class BreedDto (
 
     @SerializedName("height")
     private val _height: String
-){
+): Breed {
+    override val id: String
+        get() = _id
+
+    override val name: String
+        get() = _name
+
+    override val temperament: String
+        get() = _temperament
+
+    override val lifeSpan: String
+        get() = _lifeSpan
+
+    override val altNames: String
+        get() = _altNames
+
+    override val wikipediaUrl: String
+        get() = _wikipediaUrl
+
+    override val origin: String
+        get() = _origin
+
+    override val weight: String
+        get() = _weight
+
+    override val countryCode: String
+        get() = _countryCode
+
+    override val height: String
+        get() = _height
 }
