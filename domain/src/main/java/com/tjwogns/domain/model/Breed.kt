@@ -1,15 +1,32 @@
 package com.tjwogns.domain.model
 
 interface Breed {
-    val id: String
+    val id: Long
+
     val name: String
-    val temperament: String
-    val lifeSpan: String
-    val altNames: String
-    val wikipediaUrl: String
+
     val origin: String
-    val weight: String
+
+    val lifeSpan: String
+
+    val bredFor: String
+
+    val bredGroup: String
+
+    val height: BreedHeight
+
+    val weight: BreedWeight
+
+    val temperament: String
+
+    val image: BreedImage
+
+    val altNames: String
+
+    val wikipediaUrl: String
+
     val countryCode: String
-    val height: String
+
+    val description: String
 }
 

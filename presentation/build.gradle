@@ -16,6 +16,7 @@ dependencies {
 
     implementation(AndroidX.CORE_KTX)
     implementation(AndroidX.APP_COMPAT)
+    implementation(AndroidX.CONSTRAINT_LAYOUT)
     implementation(AndroidX.ACTIVITY_KTX)
     implementation(AndroidX.FRAGMENT_KTX)
     implementation(AndroidX.LIFECYCLE_VIEWMODEL_KTX)

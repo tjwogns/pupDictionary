@@ -14,6 +14,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setListener()
 
+        subscribeToLiveData()
+    }
+
+    private fun setListener() {
+        binding.btnLoad.setOnClickListener {
+            viewModel.getBreeds()
+        }
+    }
+
+    private fun subscribeToLiveData() {
+        viewModel.breeds.observe(this) {
+            println("!!! List Size : ${it.size} !!!")
+        }
     }
 }
