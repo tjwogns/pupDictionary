@@ -35,7 +35,7 @@ data class BreedDto (
     private val _temperament: String?,
 
     @SerializedName("image")
-    private val _image: String?,
+    private val _image: BreedImageDto?,
 
     @SerializedName("alt_names")
     private val _altNames: String?,
