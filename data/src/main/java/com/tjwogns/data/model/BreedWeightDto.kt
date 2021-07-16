@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import com.tjwogns.domain.model.BreedWeight
 
 data class BreedWeightDto(
-    @SerializedName("imperial")
+    @SerializedName("imperial2")
     private val _imperial: String?,
 
     @SerializedName("metric")
