@@ -15,7 +15,7 @@ interface Breed {
 
     val height: BreedHeight
 
-//    val weight: BreedWeight
+    val weight: BreedWeight
 
     val temperament: String
 

@@ -28,8 +28,8 @@ data class BreedDto (
     @SerializedName("height")
     private val _height: BreedHeightDto?,
 
-//    @SerializedName("weight")
-//    private val _weight: BreedWeightDto?,
+    @SerializedName("weight")
+    private val _weight: BreedWeightDto?,
 
     @SerializedName("temperament")
     private val _temperament: String?,
@@ -71,8 +71,8 @@ data class BreedDto (
     override val height: BreedHeight
         get() = _height ?: BreedHeightDto.UNKNOWN
 
-//    override val weight: BreedWeight
-//        get() = _weight ?: BreedWeightDto.UNKNOWN
+    override val weight: BreedWeight
+        get() = _weight ?: BreedWeightDto.UNKNOWN
 
     override val temperament: String
         get() = _temperament ?: ""

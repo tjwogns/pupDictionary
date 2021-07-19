@@ -28,6 +28,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
     private fun subscribeToLiveData() {
         viewModel.breeds.observe(this) {
             println("!!! List Size : ${it.size} !!!")
+            it.forEachIndexed { index, breed ->
+                println("!!! it $index : ${breed.id}, ${breed.altNames}")
+            }
         }
     }
 }
