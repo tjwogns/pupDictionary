@@ -2,6 +2,7 @@ package com.tjwogns.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.tjwogns.presentation.base.BaseActivity
 import com.tjwogns.presentation.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -16,6 +17,8 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
 
         setListener()
 
+        setAdapter()
+
         subscribeToLiveData()
     }
 
@@ -25,12 +28,14 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
         }
     }
 
+    private fun setAdapter() {
+        binding.rvBreeds.layoutManager = LinearLayoutManager(this)
+        binding.rvBreeds.adapter = BreedAdapter()
+    }
+
     private fun subscribeToLiveData() {
         viewModel.breeds.observe(this) {
-            println("!!! List Size : ${it.size} !!!")
-            it.forEachIndexed { index, breed ->
-                println("!!! it $index : ${breed.id}, ${breed.altNames}")
-            }
+            (binding.rvBreeds.adapter as BreedAdapter).setItems(it)
         }
     }
 }

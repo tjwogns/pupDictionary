@@ -41,6 +41,9 @@ internal object ApiModule {
             readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             retryOnConnectionFailure(true)
             addInterceptor(interceptor)
+            addInterceptor(HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
+            })
         }.build()
     }
 
@@ -49,7 +52,7 @@ internal object ApiModule {
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()))
+            .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
     }

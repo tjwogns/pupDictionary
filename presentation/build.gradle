@@ -22,6 +22,10 @@ dependencies {
     implementation(AndroidX.LIFECYCLE_VIEWMODEL_KTX)
     implementation(AndroidX.LIFECYCLE_LIVEDATA_KTX)
 
+    implementation(AndroidX.LIFECYCLE_LIVEDATA_KTX)
+    implementation(Libraries.GLIDE)
+    annotationProcessor(Libraries.GLIDE_COMPILER)
+
     implementation(Google.MATERIAL)
     implementation(Google.HILT_ANDROID)
     kapt          (Google.HILT_ANDROID_COMPILER)

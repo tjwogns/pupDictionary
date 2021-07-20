@@ -16,6 +16,7 @@ object Versions {
 
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "4.3.1"
+    const val GLIDE = "4.11.0"
 
     const val JUNIT = "4.13.2"
     const val ANDROID_JUNIT = "1.1.2"
@@ -56,6 +57,9 @@ object Libraries {
     const val RETROFIT_CONVERTER_GSON    = "com.squareup.retrofit2:converter-gson:${Versions.RETROFIT}"
     const val OKHTTP                     = "com.squareup.okhttp3:okhttp:${Versions.OKHTTP}"
     const val OKHTTP_LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP}"
+
+    const val GLIDE                      = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
+    const val GLIDE_COMPILER             = "com.github.bumptech.glide:compiler:${Versions.GLIDE}"
 }
 
 object Test {

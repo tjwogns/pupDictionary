@@ -11,10 +11,10 @@ data class BreedHeightDto(
     private val _metric: String?
 ): BreedHeight {
     override val imperial
-        = _imperial ?: ""
+        get() = _imperial ?: ""
 
     override val metric
-        = _metric ?: ""
+        get() = _metric ?: ""
 
     companion object {
         val UNKNOWN: BreedHeight = BreedHeightDto(null, null)

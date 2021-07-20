@@ -19,10 +19,13 @@ data class BreedImageDto(
 ): BreedImage {
     override val height: Long
         get() = _height ?: 0L
+
     override val width: Long
         get() = _width ?: 0L
+
     override val imageId: String
         get() = _imageId ?: ""
+
     override val imageUrl: String
         get() =  _imageUrl ?: ""
 

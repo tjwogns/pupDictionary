@@ -9,12 +9,12 @@ data class BreedWeightDto(
 
     @SerializedName("metric")
     private val _metric: String?
-): BreedWeight{
+): BreedWeight {
     override val imperial
-        = _imperial ?: ""
+        get() = _imperial ?: ""
 
     override val metric
-        = _metric ?: ""
+        get() = _metric ?: ""
 
     companion object {
         val UNKNOWN: BreedWeight = BreedWeightDto(null, null)
