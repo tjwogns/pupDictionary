@@ -18,7 +18,11 @@ abstract class BaseRecyclerViewAdapter<D, VH : BaseViewHolder<D, ViewDataBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         return getViewHolder(parent, viewType).apply {
-
+            onItemClickListener?.let { listener ->
+                itemView.setOnClickListener {
+//                    listener.onItemClick(getItem(bindingAdapterPosition), bindingAdapterPosition)
+                }
+            }
         }
     }
 
