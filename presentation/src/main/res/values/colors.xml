@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- BLACK & WHITE -->
+    <color name="material_black">#000000</color>
+    <color name="material_white">#FFFFFF</color>
+</resources>
