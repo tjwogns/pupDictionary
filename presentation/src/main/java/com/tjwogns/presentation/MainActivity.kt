@@ -30,7 +30,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
 
     private fun setAdapter() {
         binding.rvBreeds.layoutManager = LinearLayoutManager(this)
-        binding.rvBreeds.adapter = BreedAdapter()
+        binding.rvBreeds.adapter = BreedAdapter(applicationContext)
     }
 
     private fun subscribeToLiveData() {

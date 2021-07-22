@@ -1,5 +1,10 @@
 package com.tjwogns.presentation
 
+import android.animation.Animator
+import android.content.Context
+import android.os.Handler
+import android.os.Looper
+import android.view.View
 import android.view.ViewGroup
 import com.tjwogns.domain.model.BreedSnippet
 import com.tjwogns.domain.model.BreedViewType
@@ -7,14 +12,24 @@ import com.tjwogns.presentation.base.BaseRecyclerViewAdapter
 import com.tjwogns.presentation.base.BaseViewHolder
 import com.tjwogns.presentation.databinding.ItemBreedDetailLayoutBinding
 import com.tjwogns.presentation.databinding.ItemBreedLayoutBinding
+import com.tjwogns.presentation.helper.UiHelper
 
-class BreedAdapter: BaseRecyclerViewAdapter<BreedSnippet, BaseViewHolder<BreedSnippet, *>>() {
+class BreedAdapter(context: Context)
+    : BaseRecyclerViewAdapter<BreedSnippet, BaseViewHolder<BreedSnippet, *>>() {
 
     init {
         this.onItemClickListener = object: OnItemClickListener<BreedSnippet> {
-            override fun onItemClick(data: BreedSnippet, position: Int) {
+            override fun onItemClick(data: BreedSnippet, position: Int, view: View) {
                 data.changeViewType()
+
                 // add flip animation
+                val flipAnimator = UiHelper.flipView(context, view)
+
+                view.postDelayed({
+                    notifyItemChanged(position)
+                },1000)
+
+                flipAnimator.start()
             }
         }
     }
@@ -60,6 +75,5 @@ class BreedAdapter: BaseRecyclerViewAdapter<BreedSnippet, BaseViewHolder<BreedSn
             binding.breed = data.breed
             binding.executePendingBindings()
         }
-
     }
 }

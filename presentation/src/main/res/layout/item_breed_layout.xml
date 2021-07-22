@@ -15,7 +15,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_breed"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_margin="8dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,79 +38,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
-                android:text="Name : "
+                android:text="Name"
                 android:textColor="@color/material_black"
+                android:textStyle="bold"
+                android:textSize="14dp"
                 app:layout_constraintStart_toEndOf="@id/iv_breed"
                 app:layout_constraintTop_toTopOf="@id/iv_breed"/>
 
             <TextView
                 android:id="@+id/tv_name_content"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@{breed.name}"
                 android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/tv_name"
-                app:layout_constraintTop_toTopOf="@id/tv_name"/>
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-            <TextView
-                android:id="@+id/tv_origin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:text="Origin : "
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/iv_breed"
-                app:layout_constraintTop_toBottomOf="@id/tv_name"/>
-
-            <TextView
-                android:id="@+id/tv_origin_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{breed.origin}"
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/tv_origin"
-                app:layout_constraintTop_toTopOf="@id/tv_origin"/>
-
-            <TextView
-                android:id="@+id/tv_life_span"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:text="LifeSpan : "
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/iv_breed"
-                app:layout_constraintTop_toBottomOf="@id/tv_origin"/>
-
-            <TextView
-                android:id="@+id/tv_life_span_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{breed.lifeSpan}"
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/tv_life_span"
-                app:layout_constraintTop_toTopOf="@id/tv_life_span"/>
-
-            <TextView
-                android:id="@+id/tv_temperament"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:text="Temperament : "
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/iv_breed"
-                app:layout_constraintTop_toBottomOf="@id/tv_life_span"/>
-
-            <TextView
-                android:id="@+id/tv_temperament_content"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{breed.temperament}"
-                android:textColor="@color/material_black"
-                app:layout_constraintStart_toEndOf="@id/tv_temperament"
-                app:layout_constraintTop_toTopOf="@id/tv_temperament"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
