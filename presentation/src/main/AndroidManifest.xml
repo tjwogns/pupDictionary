@@ -11,6 +11,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".normal.NormalListActivity" />
+        <activity android:name=".paging2.Paging2ListActivity" />
     </application>
 
 </manifest>

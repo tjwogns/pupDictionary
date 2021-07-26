@@ -5,7 +5,7 @@
     <data>
         <variable
             name="vh"
-            type="com.tjwogns.presentation.normal.NormalBreedAdapter" />
+            type="com.tjwogns.presentation.normal.NormalBreedAdapter.BreedViewHolder" />
 
         <variable
             name="breed"

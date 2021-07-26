@@ -6,6 +6,7 @@ import androidx.activity.viewModels
 import com.tjwogns.presentation.base.BaseActivity
 import com.tjwogns.presentation.databinding.ActivityMainBinding
 import com.tjwogns.presentation.normal.NormalListActivity
+import com.tjwogns.presentation.paging2.Paging2ListActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,6 +24,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
         binding.btnNormal.setOnClickListener {
             startNormalListActivity()
         }
+
+        binding.btnPaging2.setOnClickListener {
+            startPaging2ListActivity()
+        }
     }
 
     /**
@@ -30,6 +35,15 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
      */
     private fun startNormalListActivity() {
         val intent = Intent(this, NormalListActivity::class.java)
+
+        startActivity(intent)
+    }
+
+    /**
+     * Paging2 리스트 화면으로 이동
+     */
+    private fun startPaging2ListActivity() {
+        val intent = Intent(this, Paging2ListActivity::class.java)
 
         startActivity(intent)
     }

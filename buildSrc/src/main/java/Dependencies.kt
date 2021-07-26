@@ -11,6 +11,7 @@ object Versions {
     const val LIFECYCLE_KTX = "2.3.1"
     const val ROOM = "2.3.0"
     const val RECYCLER_VIEW = "1.2.1"
+    const val PAGING2 = "2.1.2"
 
     const val HILT = "2.35.1"
     const val MATERIAL = "1.3.0"
@@ -46,6 +47,8 @@ object AndroidX {
     const val ROOM_COMPILER           = "androidx.room:room-compiler:${Versions.ROOM}"
 
     const val RECYCLER_VIEW           = "androidx.recyclerview:recyclerview:${Versions.RECYCLER_VIEW}"
+
+    const val PAGING2                 = "androidx.paging:paging-runtime:${Versions.PAGING2}"
 }
 
 object Google {
