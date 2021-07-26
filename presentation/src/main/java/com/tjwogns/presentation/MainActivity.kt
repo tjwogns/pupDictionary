@@ -1,10 +1,11 @@
 package com.tjwogns.presentation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.tjwogns.presentation.base.BaseActivity
 import com.tjwogns.presentation.databinding.ActivityMainBinding
+import com.tjwogns.presentation.normal.NormalListActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -16,26 +17,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(R.layout.a
         super.onCreate(savedInstanceState)
 
         setListener()
-
-        setAdapter()
-
-        subscribeToLiveData()
     }
 
     private fun setListener() {
-        binding.btnLoad.setOnClickListener {
-            viewModel.getBreeds()
+        binding.btnNormal.setOnClickListener {
+            startNormalListActivity()
         }
     }
 
-    private fun setAdapter() {
-        binding.rvBreeds.layoutManager = LinearLayoutManager(this)
-        binding.rvBreeds.adapter = BreedAdapter(applicationContext)
-    }
+    /**
+     * 기본 리스트 화면으로 이동
+     */
+    private fun startNormalListActivity() {
+        val intent = Intent(this, NormalListActivity::class.java)
 
-    private fun subscribeToLiveData() {
-        viewModel.breeds.observe(this) {
-            (binding.rvBreeds.adapter as BreedAdapter).setItems(it)
-        }
+        startActivity(intent)
     }
 }

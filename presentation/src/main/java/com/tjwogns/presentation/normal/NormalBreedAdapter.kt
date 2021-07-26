@@ -1,20 +1,18 @@
-package com.tjwogns.presentation
+package com.tjwogns.presentation.normal
 
-import android.animation.Animator
 import android.content.Context
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import com.tjwogns.domain.model.BreedSnippet
 import com.tjwogns.domain.model.BreedViewType
+import com.tjwogns.presentation.R
 import com.tjwogns.presentation.base.BaseRecyclerViewAdapter
 import com.tjwogns.presentation.base.BaseViewHolder
-import com.tjwogns.presentation.databinding.ItemBreedDetailLayoutBinding
-import com.tjwogns.presentation.databinding.ItemBreedLayoutBinding
+import com.tjwogns.presentation.databinding.ItemNormalBreedDetailLayoutBinding
+import com.tjwogns.presentation.databinding.ItemNormalBreedLayoutBinding
 import com.tjwogns.presentation.helper.UiHelper
 
-class BreedAdapter(context: Context)
+class NormalBreedAdapter(context: Context)
     : BaseRecyclerViewAdapter<BreedSnippet, BaseViewHolder<BreedSnippet, *>>() {
 
     init {
@@ -27,7 +25,7 @@ class BreedAdapter(context: Context)
 
                 view.postDelayed({
                     notifyItemChanged(position)
-                },1000)
+                },500)
 
                 flipAnimator.start()
             }
@@ -57,7 +55,9 @@ class BreedAdapter(context: Context)
     }
 
     class BreedViewHolder(parent: ViewGroup)
-        : BaseViewHolder<BreedSnippet, ItemBreedLayoutBinding>(parent, R.layout.item_breed_layout) {
+        : BaseViewHolder<BreedSnippet, ItemNormalBreedLayoutBinding>(parent,
+        R.layout.item_normal_breed_layout
+    ) {
 
         override fun bind(data: BreedSnippet) {
             binding.vh = this
@@ -68,7 +68,9 @@ class BreedAdapter(context: Context)
     }
 
     class BreedDetailViewHolder(parent: ViewGroup)
-        : BaseViewHolder<BreedSnippet, ItemBreedDetailLayoutBinding>(parent, R.layout.item_breed_detail_layout) {
+        : BaseViewHolder<BreedSnippet, ItemNormalBreedDetailLayoutBinding>(parent,
+        R.layout.item_normal_breed_detail_layout
+    ) {
 
         override fun bind(data: BreedSnippet) {
             binding.vh = this

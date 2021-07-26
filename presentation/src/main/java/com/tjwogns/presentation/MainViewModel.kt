@@ -11,15 +11,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val breedUseCase: BreedUseCase
 ): BaseViewModel() {
-
-    private val _breeds = MutableLiveData<List<BreedSnippet>>()
-    val breeds: LiveData<List<BreedSnippet>> = _breeds
-
-    fun getBreeds() {
-        breedUseCase(viewModelScope) { result ->
-            _breeds.value = result.map { BreedSnippet(it) }
-        }
-    }
 }
