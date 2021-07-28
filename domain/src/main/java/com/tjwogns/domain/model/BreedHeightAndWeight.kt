@@ -1,6 +1,6 @@
 package com.tjwogns.domain.model
 
-interface BreedHeight {
+interface BreedHeightAndWeight {
     val imperial: String
 
     val metric: String

@@ -17,12 +17,14 @@ dependencies {
     implementation(AndroidX.CORE_KTX)
     implementation(AndroidX.APP_COMPAT)
     implementation(AndroidX.PAGING2)
+    implementation(AndroidX.PAGING2_COMMON)
     implementation(AndroidX.ROOM_RUNTIME)
     implementation(AndroidX.ROOM_KTX)
     annotationProcessor(AndroidX.ROOM_COMPILER)
 
     implementation(Google.HILT_ANDROID)
     kapt          (Google.HILT_ANDROID_COMPILER)
+    implementation(Google.GSON)
 
     //
     implementation(Libraries.RETROFIT)

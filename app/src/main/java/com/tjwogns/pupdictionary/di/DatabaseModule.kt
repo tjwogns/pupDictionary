@@ -1,5 +1,6 @@
 package com.tjwogns.pupdictionary.di
 
+import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -20,9 +21,9 @@ object DatabaseModule {
 
     @Singleton
     @Provides
-    fun providesDatabase(context: Context): PupDatabase {
+    fun providesDatabase(application: Application): PupDatabase {
         return instance ?: synchronized(this) {
-            instance ?: buildDatabase(context).also { instance = it }
+            instance ?: buildDatabase(application.applicationContext).also { instance = it }
         }
     }
 

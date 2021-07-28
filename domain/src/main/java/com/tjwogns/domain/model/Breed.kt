@@ -13,9 +13,9 @@ interface Breed {
 
     val bredGroup: String
 
-    val height: BreedHeight
+    val height: BreedHeightAndWeight
 
-    val weight: BreedWeight
+    val weight: BreedHeightAndWeight
 
     val temperament: String
 

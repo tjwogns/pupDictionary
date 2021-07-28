@@ -1,15 +1,15 @@
 package com.tjwogns.data.model
 
 import com.google.gson.annotations.SerializedName
-import com.tjwogns.domain.model.BreedWeight
+import com.tjwogns.domain.model.BreedHeightAndWeight
 
-data class BreedWeightDto(
+data class BreedHeightAndWeightDto(
     @SerializedName("imperial")
     private val _imperial: String?,
 
     @SerializedName("metric")
     private val _metric: String?
-): BreedWeight {
+): BreedHeightAndWeight {
     override val imperial
         get() = _imperial ?: ""
 
@@ -17,6 +17,6 @@ data class BreedWeightDto(
         get() = _metric ?: ""
 
     companion object {
-        val UNKNOWN: BreedWeight = BreedWeightDto(null, null)
+        val UNKNOWN: BreedHeightAndWeight = BreedHeightAndWeightDto(null, null)
     }
 }

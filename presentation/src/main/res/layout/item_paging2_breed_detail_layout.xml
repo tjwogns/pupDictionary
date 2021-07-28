@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vh"
+            type="com.tjwogns.presentation.paging2.Paging2BreedAdapter.BreedDetailViewHolder" />
+
+        <variable
+            name="breed"
+            type="com.tjwogns.domain.model.Breed" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_breed"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_breed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Name : "
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_name_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{breed.name}"
+                android:textColor="@color/material_black"
+                app:layout_constraintStart_toEndOf="@id/tv_name"
+                app:layout_constraintTop_toTopOf="@id/tv_name"/>
+
+            <TextView
+                android:id="@+id/tv_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Origin : "
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+            <TextView
+                android:id="@+id/tv_origin_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{breed.origin}"
+                android:textColor="@color/material_black"
+                app:layout_constraintStart_toEndOf="@id/tv_origin"
+                app:layout_constraintTop_toTopOf="@id/tv_origin"/>
+
+            <TextView
+                android:id="@+id/tv_life_span"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="LifeSpan : "
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_origin"/>
+
+            <TextView
+                android:id="@+id/tv_life_span_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{breed.lifeSpan}"
+                android:textColor="@color/material_black"
+                app:layout_constraintStart_toEndOf="@id/tv_life_span"
+                app:layout_constraintTop_toTopOf="@id/tv_life_span"/>
+
+            <TextView
+                android:id="@+id/tv_temperament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Temperament :"
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_life_span"/>
+
+            <TextView
+                android:id="@+id/tv_temperament_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{breed.temperament}"
+                android:textColor="@color/material_black"
+                android:layout_marginHorizontal="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperament"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Height : "
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperament_content"/>
+
+            <TextView
+                android:id="@+id/tv_height_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{breed.height.metric}"
+                android:textColor="@color/material_black"
+                app:layout_constraintStart_toEndOf="@id/tv_height"
+                app:layout_constraintTop_toTopOf="@id/tv_height"/>
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:text="Weight : "
+                android:textColor="@color/material_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_height_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperament_content"/>
+
+            <TextView
+                android:id="@+id/tv_weight_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{breed.weight.metric}"
+                android:textColor="@color/material_black"
+                app:layout_constraintStart_toEndOf="@id/tv_weight"
+                app:layout_constraintTop_toTopOf="@id/tv_weight"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

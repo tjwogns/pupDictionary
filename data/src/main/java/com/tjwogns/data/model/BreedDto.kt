@@ -2,9 +2,8 @@ package com.tjwogns.data.model
 
 import com.google.gson.annotations.SerializedName
 import com.tjwogns.domain.model.Breed
-import com.tjwogns.domain.model.BreedHeight
+import com.tjwogns.domain.model.BreedHeightAndWeight
 import com.tjwogns.domain.model.BreedImage
-import com.tjwogns.domain.model.BreedWeight
 
 data class BreedDto (
     @SerializedName("id")
@@ -26,10 +25,10 @@ data class BreedDto (
     private val _bredGroup: String?,
 
     @SerializedName("height")
-    private val _height: BreedHeightDto?,
+    private val _height: BreedHeightAndWeightDto?,
 
     @SerializedName("weight")
-    private val _weight: BreedWeightDto?,
+    private val _weight: BreedHeightAndWeightDto?,
 
     @SerializedName("temperament")
     private val _temperament: String?,
@@ -68,11 +67,11 @@ data class BreedDto (
     override val bredGroup: String
         get() = _bredGroup ?: ""
 
-    override val height: BreedHeight
-        get() = _height ?: BreedHeightDto.UNKNOWN
+    override val height: BreedHeightAndWeight
+        get() = _height ?: BreedHeightAndWeightDto.UNKNOWN
 
-    override val weight: BreedWeight
-        get() = _weight ?: BreedWeightDto.UNKNOWN
+    override val weight: BreedHeightAndWeight
+        get() = _weight ?: BreedHeightAndWeightDto.UNKNOWN
 
     override val temperament: String
         get() = _temperament ?: ""

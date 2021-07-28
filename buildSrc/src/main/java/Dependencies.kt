@@ -15,6 +15,7 @@ object Versions {
 
     const val HILT = "2.35.1"
     const val MATERIAL = "1.3.0"
+    const val GSON = "2.8.6"
 
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "4.3.1"
@@ -57,6 +58,8 @@ object Google {
     const val HILT_ANDROID_COMPILER = "com.google.dagger:hilt-android-compiler:${Versions.HILT}"
 
     const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+
+    const val GSON = "com.google.code.gson:gson:${Versions.GSON}"
 }
 
 object Libraries {
