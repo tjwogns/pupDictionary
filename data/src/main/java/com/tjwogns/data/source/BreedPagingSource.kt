@@ -12,7 +12,9 @@ class BreedPagingSource@Inject constructor(
         params: LoadInitialParams<Int>,
         callback: LoadInitialCallback<Int, Breed>
     ) {
-        TODO("Not yet implemented")
+        breedApi.getBreeds(0, params.requestedLoadSize)
+
+//        callback.onResult()
     }
 
     override fun loadBefore(params: LoadParams<Int>, callback: LoadCallback<Int, Breed>) {

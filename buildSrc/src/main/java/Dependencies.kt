@@ -49,8 +49,9 @@ object AndroidX {
 
     const val RECYCLER_VIEW           = "androidx.recyclerview:recyclerview:${Versions.RECYCLER_VIEW}"
 
-    const val PAGING2                 = "androidx.paging:paging-runtime:${Versions.PAGING2}"
+    const val PAGING2                 = "androidx.paging:paging-runtime-ktx:${Versions.PAGING2}"
     const val PAGING2_COMMON          = "androidx.paging:paging-common:${Versions.PAGING2}"
+
 }
 
 object Google {

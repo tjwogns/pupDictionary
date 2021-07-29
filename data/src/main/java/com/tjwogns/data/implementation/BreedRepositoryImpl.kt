@@ -8,6 +8,7 @@ import com.tjwogns.data.db.PupDatabase
 import com.tjwogns.data.source.BreedRemoteSource
 import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.repository.BreedRepository
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class BreedRepositoryImpl @Inject constructor(
@@ -19,19 +20,9 @@ class BreedRepositoryImpl @Inject constructor(
         return breedRemoteSource.getBreads()
     }
 
-    override suspend fun getPaging2Breeds(): DataSource.Factory<Int, Breed> {
+    override fun getPaging2Breeds(): DataSource.Factory<Int, Breed> {
+
         return database.breedDao().getBreeds()
     }
 
-//    override suspend fun getPaging2Breeds(): LiveData<PagedList<Breed>> {
-//        return LivePagedListBuilder(factory, config).build()
-//    }
-//    val factory = database.breedDao().getBreeds()
-//
-//    val config = PagedList.Config.Builder()
-//        .setPageSize(20)
-//        .setInitialLoadSizeHint(5)
-//        .setPrefetchDistance(10)
-//        .setEnablePlaceholders(false)
-//        .build()
 }

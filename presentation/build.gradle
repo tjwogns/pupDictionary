@@ -23,6 +23,7 @@ dependencies {
     implementation(AndroidX.LIFECYCLE_LIVEDATA_KTX)
     implementation(AndroidX.RECYCLER_VIEW)
     implementation(AndroidX.PAGING2)
+    implementation(AndroidX.PAGING2_COMMON)
 
     implementation(Libraries.GLIDE)
     annotationProcessor(Libraries.GLIDE_COMPILER)
