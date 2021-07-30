@@ -2,6 +2,8 @@ package com.tjwogns.domain.usecase
 
 import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.model.BreedSnippet
+import com.tjwogns.domain.model.ResultWrapper
+import com.tjwogns.domain.model.ResultWrapper.*
 import com.tjwogns.domain.repository.BreedRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,13 +15,10 @@ class BreedUseCase(
 ) {
     operator fun invoke(
         scope: CoroutineScope,
-        onResult: (List<Breed>) -> Unit = {}
+        onResult: (ResultWrapper<List<Breed>>) -> Unit = {}
     ) {
         scope.launch(Dispatchers.Main) {
-            val deferred = async(Dispatchers.IO) {
-                breedRepository.getBreeds()
-            }
-            onResult(deferred.await())
+            onResult(breedRepository.getBreeds())
         }
     }
 }

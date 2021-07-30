@@ -4,10 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.tjwogns.domain.model.BreedSnippet
+import com.tjwogns.domain.model.ResultWrapper
+import com.tjwogns.domain.model.ResultWrapper.*
 import com.tjwogns.domain.usecase.BreedUseCase
 import com.tjwogns.presentation.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
+import kotlin.Error
 
 @HiltViewModel
 class NormalListViewModel @Inject constructor(
@@ -23,7 +26,14 @@ class NormalListViewModel @Inject constructor(
 
     private fun getBreeds() {
         breedUseCase(viewModelScope) { result ->
-            _breeds.value = result.map { BreedSnippet(it) }
+            when (result) {
+                is Success -> {
+                    _breeds.value =  result.value.map { BreedSnippet(it) }
+                }
+                is Error -> {}
+                is NetworkError -> {}
+                else -> {}
+            }
         }
     }
 }

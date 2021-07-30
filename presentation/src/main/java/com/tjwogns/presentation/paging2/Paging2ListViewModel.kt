@@ -11,6 +11,6 @@ class Paging2ListViewModel @Inject constructor(
     private val breedUseCase: Paging2BreedUseCase
 ): BaseViewModel() {
 
-    private val _breeds = breedUseCase().toLiveData(20)
+//    private val _breeds = breedUseCase().toLiveData(20)
 
 }

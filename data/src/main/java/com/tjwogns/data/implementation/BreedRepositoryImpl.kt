@@ -1,23 +1,26 @@
 package com.tjwogns.data.implementation
 
-import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
-import androidx.paging.LivePagedListBuilder
-import androidx.paging.PagedList
+import com.tjwogns.data.api.safeApiCall
 import com.tjwogns.data.db.PupDatabase
 import com.tjwogns.data.source.BreedRemoteSource
 import com.tjwogns.domain.model.Breed
+import com.tjwogns.domain.model.ResultWrapper
 import com.tjwogns.domain.repository.BreedRepository
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 class BreedRepositoryImpl @Inject constructor(
     private val database: PupDatabase,
-    private val breedRemoteSource: BreedRemoteSource
+    private val breedRemoteSource: BreedRemoteSource,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
 ): BreedRepository{
 
-    override suspend fun getBreeds(): List<Breed> {
-        return breedRemoteSource.getBreads()
+    override suspend fun getBreeds(): ResultWrapper<List<Breed>> {
+        return safeApiCall(dispatcher) {
+            breedRemoteSource.getBreads()
+        }
     }
 
     override fun getPaging2Breeds(): DataSource.Factory<Int, Breed> {
