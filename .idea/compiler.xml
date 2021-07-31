@@ -6,6 +6,7 @@
       <module name="pupBreed.buildSrc" target="11" />
       <module name="pupBreed.data" target="11" />
       <module name="pupBreed.presentation" target="11" />
+      <module name="pupDictionary.buildSrc" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
