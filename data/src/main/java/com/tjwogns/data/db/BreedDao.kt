@@ -8,5 +8,5 @@ import com.tjwogns.data.entity.BreedEntity
 @Dao
 interface BreedDao {
     @Query("SELECT * from breeds")
-    fun getBreeds(): DataSource.Factory<Int, BreedEntity>
+    fun getDataSourceFactory(): DataSource.Factory<Int, BreedEntity>
 }

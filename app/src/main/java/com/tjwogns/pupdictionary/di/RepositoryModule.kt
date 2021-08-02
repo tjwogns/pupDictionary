@@ -1,6 +1,7 @@
 package com.tjwogns.pupdictionary.di
 
 import com.tjwogns.data.implementation.BreedRepositoryImpl
+import com.tjwogns.data.implementation.Paging2BreedRepositoryImpl
 import com.tjwogns.domain.repository.BreedRepository
 import com.tjwogns.domain.repository.Paging2BreedRepository
 import dagger.Module
@@ -21,7 +22,7 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun providesPaging2BreedRepository(repository: Paging2BreedRepository): Paging2BreedRepository {
+    fun providesPaging2BreedRepository(repository: Paging2BreedRepositoryImpl): Paging2BreedRepository {
         return repository
     }
 }

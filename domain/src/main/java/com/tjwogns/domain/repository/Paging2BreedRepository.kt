@@ -6,5 +6,5 @@ import com.tjwogns.domain.model.Breed
 
 
 interface Paging2BreedRepository {
-    fun getPaging2Breeds(): DataSource.Factory<Int,Breed>
+    fun getPaging2Breeds(isRefresh: Boolean): DataSource.Factory<Int,Breed>
 }

@@ -3,6 +3,7 @@ package com.tjwogns.data.entity
 import androidx.room.*
 import com.tjwogns.data.model.BreedHeightAndWeightDto
 import com.tjwogns.data.model.BreedImageDto
+import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.model.BreedHeightAndWeight
 import com.tjwogns.domain.model.BreedImage
 
@@ -10,61 +11,44 @@ import com.tjwogns.domain.model.BreedImage
 data class BreedEntity(
     @PrimaryKey
     @ColumnInfo(name = "id")
-    var id: Long = 0L,
+    override var id: Long = 0L,
 
     @ColumnInfo(name = "name")
-    var name: String = "",
+    override var name: String = "",
 
     @ColumnInfo(name = "origin")
-    var origin: String = "",
+    override var origin: String = "",
 
     @ColumnInfo(name = "life_span")
-    var lifeSpan: String = "",
+    override var lifeSpan: String = "",
 
     @ColumnInfo(name = "bred_for")
-    var bredFor: String = "",
+    override var bredFor: String = "",
 
     @ColumnInfo(name = "bred_group")
-    var bredGroup: String = "",
+    override var bredGroup: String = "",
 
     @ColumnInfo(name = "height")
-    var height: BreedHeightAndWeight = BreedHeightAndWeightDto.UNKNOWN,
+    override var height: BreedHeightAndWeight = BreedHeightAndWeightDto.UNKNOWN,
 
     @ColumnInfo(name = "weight")
-    var weight: BreedHeightAndWeight = BreedHeightAndWeightDto.UNKNOWN,
+    override var weight: BreedHeightAndWeight = BreedHeightAndWeightDto.UNKNOWN,
 
     @ColumnInfo(name = "temperament")
-    var temperament: String = "",
+    override var temperament: String = "",
 
     @ColumnInfo(name = "image")
-    var image: BreedImage = BreedImageDto.UNKNOWN,
+    override var image: BreedImage = BreedImageDto.UNKNOWN,
 
     @ColumnInfo(name = "alt_names")
-    var altNames: String = "",
+    override var altNames: String = "",
 
     @ColumnInfo(name = "wikipedia_url")
-    var wikipediaUrl: String = "",
+    override var wikipediaUrl: String = "",
 
     @ColumnInfo(name = "country_code")
-    var countryCode: String = "",
+    override var countryCode: String = "",
 
     @ColumnInfo(name = "description")
-    var description: String = ""
-) {
-    constructor() : this(
-        0L,
-        "",
-        "",
-        "",
-        "",
-        "",
-        BreedHeightAndWeightDto.UNKNOWN,
-        BreedHeightAndWeightDto.UNKNOWN,
-        "",
-        BreedImageDto.UNKNOWN,
-        "",
-        "",
-        "",
-        ""
-    )
-}
+    override var description: String = ""
+): Breed
