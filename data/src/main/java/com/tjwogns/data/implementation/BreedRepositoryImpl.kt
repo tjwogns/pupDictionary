@@ -3,6 +3,7 @@ package com.tjwogns.data.implementation
 import androidx.paging.DataSource
 import com.tjwogns.data.api.safeApiCall
 import com.tjwogns.data.db.PupDatabase
+import com.tjwogns.data.entity.BreedEntity
 import com.tjwogns.data.source.BreedRemoteSource
 import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.model.ResultWrapper
@@ -23,9 +24,9 @@ class BreedRepositoryImpl @Inject constructor(
         }
     }
 
-    override fun getPaging2Breeds(): DataSource.Factory<Int, Breed> {
-
-        return database.breedDao().getBreeds()
-    }
+//    override fun getPaging2Breeds(): DataSource.Factory<Int, BreedEntity> {
+//
+//        return database.breedDao().getBreeds()
+//    }
 
 }

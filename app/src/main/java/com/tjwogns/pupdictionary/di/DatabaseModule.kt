@@ -28,7 +28,7 @@ object DatabaseModule {
     }
 
     private fun buildDatabase(context: Context): PupDatabase {
-        return Room.databaseBuilder(context, PupDatabase::class.java, "pup_db")
+        return Room.databaseBuilder(context, PupDatabase::class.java, "pup_breed.db")
             .addCallback(object : RoomDatabase.Callback() {
                 override fun onCreate(db: SupportSQLiteDatabase) {
                     super.onCreate(db)

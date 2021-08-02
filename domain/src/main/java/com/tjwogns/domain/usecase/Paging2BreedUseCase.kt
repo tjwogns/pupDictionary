@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 class Paging2BreedUseCase(
     private val breedRepository: BreedRepository
 ) {
-    operator fun invoke(): DataSource.Factory<Int,Breed> {
-        return breedRepository.getPaging2Breeds()
-    }
+//    operator fun invoke(): DataSource.Factory<Int,Breed> {
+//        return breedRepository.getPaging2Breeds()
+//    }
 }

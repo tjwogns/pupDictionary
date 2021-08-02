@@ -7,5 +7,5 @@ import com.tjwogns.domain.model.Breed
 
 interface BreedRepository {
     suspend fun getBreeds(): ResultWrapper<List<Breed>>
-    fun getPaging2Breeds(): DataSource.Factory<Int,Breed>
+//    fun getPaging2Breeds(): DataSource.Factory<Int,BreedEntity>
 }

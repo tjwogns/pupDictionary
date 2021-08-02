@@ -1,7 +1,7 @@
 object Versions {
-    const val KOTLIN_VERSION = "1.5.0"
+    const val KOTLIN_VERSION = "1.5.21"
     const val KOTLINX_COROUTINES = "1.5.0"
-    const val BUILD_GRADLE = "4.2.1"
+    const val BUILD_GRADLE = "7.1.0-alpha05"
 
     const val CORE_KTX = "1.5.0"
     const val APP_COMPAT = "1.3.0"
@@ -9,17 +9,18 @@ object Versions {
     const val ACTIVITY_KTX = "1.2.3"
     const val FRAGMENT_KTX = "1.3.4"
     const val LIFECYCLE_KTX = "2.3.1"
-    const val ROOM = "2.3.0"
+    const val ROOM = "2.2.5"
     const val RECYCLER_VIEW = "1.2.1"
     const val PAGING2 = "2.1.2"
 
-    const val HILT = "2.35.1"
+    const val HILT = "2.38.1"
     const val MATERIAL = "1.3.0"
     const val GSON = "2.8.6"
 
     const val RETROFIT = "2.7.1"
     const val OKHTTP = "4.3.1"
     const val GLIDE = "4.11.0"
+    const val JDBC = "3.34.0"
 
     const val JUNIT = "4.13.2"
     const val ANDROID_JUNIT = "1.1.2"
@@ -71,6 +72,8 @@ object Libraries {
 
     const val GLIDE                      = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
     const val GLIDE_COMPILER             = "com.github.bumptech.glide:compiler:${Versions.GLIDE}"
+
+    const val JDBC                       = "org.xerial:sqlite-jdbc:${Versions.JDBC}"
 }
 
 object Test {
