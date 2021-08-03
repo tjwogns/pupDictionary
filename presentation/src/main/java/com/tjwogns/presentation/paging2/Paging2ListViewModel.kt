@@ -13,7 +13,7 @@ class Paging2ListViewModel @Inject constructor(
 
 
     init {
-        val factory = breedUseCase(false)
+//        val factory = breedUseCase(false)
         // Clean Architecture 에서 Rx를 사용하지 않고 LiveData 를 통해 Paging2 적용을 하려고 했으나 한계가 있음.
     }
 

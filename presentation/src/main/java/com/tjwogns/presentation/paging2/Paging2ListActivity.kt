@@ -28,10 +28,10 @@ class Paging2ListActivity : BaseActivity<ActivityPaging2ListBinding, Paging2List
     }
 
     private fun subscribeToLiveData() {
-        viewModel.breeds.observe(this) {
-            it.forEach {
-                println("$it")
-            }
-        }
+//        viewModel.breeds.observe(this) {
+//            it.forEach {
+//                println("$it")
+//            }
+//        }
     }
 }

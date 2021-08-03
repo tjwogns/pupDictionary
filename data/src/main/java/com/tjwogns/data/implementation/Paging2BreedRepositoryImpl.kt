@@ -4,7 +4,7 @@ import androidx.paging.DataSource
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import com.tjwogns.data.db.PupDatabase
-import com.tjwogns.data.source.Paging2BreedRemoteSource
+import com.tjwogns.data.source.paging2.Paging2BreedRemoteSource
 import com.tjwogns.data.source.paging2.BreedBoundaryCallback
 import com.tjwogns.domain.model.Breed
 import com.tjwogns.domain.repository.Paging2BreedRepository
@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 class Paging2BreedRepositoryImpl @Inject constructor(
     private val database: PupDatabase,
-    private val breedRemoteSource: Paging2BreedRemoteSource,
+    private val paging2BreedRemoteSource: Paging2BreedRemoteSource,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
 ): Paging2BreedRepository {
     override fun getPaging2Breeds(isRefresh: Boolean): DataSource.Factory<Int, Breed> {
@@ -24,7 +24,7 @@ class Paging2BreedRepositoryImpl @Inject constructor(
         // PageBoundaryCallback
         val boundaryCallback = BreedBoundaryCallback(
             database,
-            breedRemoteSource,
+            paging2BreedRemoteSource,
             dispatcher
         )
 

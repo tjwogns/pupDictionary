@@ -5,7 +5,6 @@ import com.tjwogns.data.api.safeApiCall
 import com.tjwogns.data.db.PupDatabase
 import com.tjwogns.data.entity.BreedEntity
 import com.tjwogns.data.model.BreedDto
-import com.tjwogns.data.source.Paging2BreedRemoteSource
 import com.tjwogns.domain.model.ResultWrapper.*
 import kotlinx.coroutines.*
 import java.lang.Exception

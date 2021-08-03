@@ -1,4 +1,4 @@
-package com.tjwogns.data.source
+package com.tjwogns.data.source.paging2
 
 import com.tjwogns.data.api.BreedApi
 import com.tjwogns.data.model.BreedDto
