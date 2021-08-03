@@ -1,6 +1,7 @@
 package com.tjwogns.data.entity
 
 import androidx.room.*
+import com.tjwogns.data.model.BreedDto
 import com.tjwogns.data.model.BreedHeightAndWeightDto
 import com.tjwogns.data.model.BreedImageDto
 import com.tjwogns.domain.model.Breed
@@ -51,4 +52,23 @@ data class BreedEntity(
 
     @ColumnInfo(name = "description")
     override var description: String = ""
-): Breed
+): Breed {
+    fun create(breedDto: BreedDto): BreedEntity {
+        return BreedEntity(
+            breedDto.id,
+            breedDto.name,
+            breedDto.origin,
+            breedDto.lifeSpan,
+            breedDto.bredFor,
+            breedDto.bredGroup,
+            breedDto.height,
+            breedDto.weight,
+            breedDto.temperament,
+            breedDto.image,
+            breedDto.altNames,
+            breedDto.wikipediaUrl,
+            breedDto.countryCode,
+            breedDto.description
+        )
+    }
+}

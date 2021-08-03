@@ -15,7 +15,7 @@ import javax.inject.Inject
 class BreedRepositoryImpl @Inject constructor(
     private val database: PupDatabase,
     private val breedRemoteSource: BreedRemoteSource,
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ): BreedRepository{
 
     override suspend fun getBreeds(): ResultWrapper<List<Breed>> {
