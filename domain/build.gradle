@@ -13,4 +13,5 @@ dependencies {
     implementation(Kotlin.COROUTINES_CORE)
 
     implementation(AndroidX.PAGING2_COMMON)
+    implementation(AndroidX.PAGING3_COMMON)
 }

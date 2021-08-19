@@ -12,6 +12,7 @@ object Versions {
     const val ROOM = "2.2.5"
     const val RECYCLER_VIEW = "1.2.1"
     const val PAGING2 = "2.1.2"
+    const val PAGING3 = "3.0.1"
 
     const val HILT = "2.38.1"
     const val MATERIAL = "1.3.0"
@@ -52,6 +53,9 @@ object AndroidX {
 
     const val PAGING2                 = "androidx.paging:paging-runtime-ktx:${Versions.PAGING2}"
     const val PAGING2_COMMON          = "androidx.paging:paging-common:${Versions.PAGING2}"
+
+    const val PAGING3                 = "androidx.paging:paging-runtime-ktx:${Versions.PAGING3}"
+    const val PAGING3_COMMON          = "androidx.paging:paging-common:${Versions.PAGING3}"
 
 }
 
