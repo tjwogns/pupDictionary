@@ -7,7 +7,7 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
-abstract class BasePagedListAdapter<D, VH : BaseViewHolder<D, ViewDataBinding>>(private val DF: DiffUtil.ItemCallback<D>) : PagedListAdapter<D, VH>(DF) {
+abstract class BasePagedListAdapter<D : Any, VH : BaseViewHolder<D, ViewDataBinding>>(private val DF: DiffUtil.ItemCallback<D>) : PagedListAdapter<D, VH>(DF) {
 
     protected val items = mutableListOf<D>()
 
